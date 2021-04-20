@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./first.component.css']
 })
 export class FirstComponent implements OnInit {
-
+  name="Athar";
+  ishidden=true;
+  bgc="yellow";
+  contenueInput="";
   constructor() { }
 
   ngOnInit() {
   }
 
+  ishide() {
+    this.ishidden=!this.ishidden;
+  }
+
+  afficheInpule(input: string) {
+    this.contenueInput=input;
+  }
 }

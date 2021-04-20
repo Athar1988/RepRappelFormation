@@ -1,3 +1,5 @@
-<p>
-  first works!
-</p>
+<div>hello {{name}}</div>
+<p [style.backgroundColor]="bgc" [hidden]="ishidden" >Salut tous le monde </p>
+<button (click)="ishide()" class="btn btn-success">Show/Hide</button>
+<input type="text" class="form-control" #MonInput (click)="afficheInpule(MonInput.value)">
+Le contenu est :{{contenueInput}}
