@@ -1,5 +1,19 @@
+<br>***************************** 1 seul sens *************************************
+
 <div>hello {{name}}</div>
-<p [style.backgroundColor]="bgc" [hidden]="ishidden" >Salut tous le monde </p>
+<p [style.backgroundColor]="bgc" [hidden]="ishidden" >Salut tous le mon</p>
 <button (click)="ishide()" class="btn btn-success">Show/Hide</button>
 <input type="text" class="form-control" #MonInput (click)="afficheInpule(MonInput.value)">
 Le contenu est :{{contenueInput}}
+<div [style.backgroundColor]="bgc">Changement de couleur</div>
+<input type="text" (change)="changeCouleur(inputCouleur.value)"  #inputCouleur class="form-control">
+<button (click)="changeCouleur(defaultcolor)" class="btn btn-dark">Reset</button><br>
+<p (click)="etatinitial()">retour cas initial</p>
+<input type="text" [(ngModel)]="value" class="form-control">
+Le contenu est : {{value}}<br>
+*******************************************************************************<br>
+
+
+<div [style.backgroundColor]="bgc">Changement de couleur</div>
+<input type="color" [(ngModel)]="bgc"  class="form-control">
+<button (click)="changeCouleur(defaultcolor)" class="btn btn-dark">Reset</button><br>

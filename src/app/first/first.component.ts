@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-first',
@@ -6,13 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./first.component.css']
 })
 export class FirstComponent implements OnInit {
-  name="Athar";
+  name="";
   ishidden=true;
-  bgc="yellow";
   contenueInput="";
+  @Input() defaultcolor="green";
+  bgc="";
+  value="";
   constructor() { }
 
   ngOnInit() {
+    this.name="Athar";
+    this.ishidden=true;
+    this.value="le champs est vide";
+    this.bgc=this.defaultcolor;
   }
 
   ishide() {
@@ -21,5 +27,13 @@ export class FirstComponent implements OnInit {
 
   afficheInpule(input: string) {
     this.contenueInput=input;
+  }
+
+  changeCouleur(newColor:string) : void{
+    this.bgc=newColor;
+  }
+
+  etatinitial() {
+    this.value="chamgement";
   }
 }
