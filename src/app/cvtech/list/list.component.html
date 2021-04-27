@@ -1,0 +1,11 @@
+
+
+<ol class="list-group">
+  <li class="list-group-item"
+      *ngFor="let c of cvs; let isodd=odd"
+  [ngClass]="{
+  'list-group-item-primary':isodd  ,
+  'list-group-item-warning': !isodd }">
+    <app-item [cv]=c (sendItemToList)="recupereItem($event)" ></app-item>
+  </li>
+</ol>

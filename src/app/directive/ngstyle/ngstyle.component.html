@@ -1,0 +1,26 @@
+<p  [ngStyle]="{
+  color:color,
+  fontSize:size+'px',
+  fontFamily:font
+}">
+  Notre Texte
+</p>
+<div class="row">
+  <div class="col-md-3">
+  Color :  <input type="color" class="form-control" [(ngModel)]="color">
+  </div>
+  <div class="col-md-3">
+  Size :   <input type="number" class="form-control"  [(ngModel)]="size">
+  </div>
+  <div class="col-md-3">
+   Police :
+    <select class="form-control"  [(ngModel)]="font">
+      <option value="">--Please choose an option--</option>
+      <option value="Arial">Arial</option>
+      <option value="Sans serif">Sans serif</option>
+      <option value="Georgia">Georgia</option>
+    </select>
+  </div>
+
+  <input appRainbow type="type" class="form-control">
+</div>
