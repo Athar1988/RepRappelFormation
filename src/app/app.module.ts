@@ -14,6 +14,9 @@ import { NgstyleComponent } from './directive/ngstyle/ngstyle.component';
 import { RainbowDirective } from './directive/rainbow.directive';
 import { DefaultImagePipe } from './pipes/default-image.pipe';
 import { TodocomponentComponent } from './services/todocomponent/todocomponent.component';
+import {ToastrModule} from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EmbaucheComponent } from './cvtech/embauche/embauche.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +31,14 @@ import { TodocomponentComponent } from './services/todocomponent/todocomponent.c
     RainbowDirective,
     DefaultImagePipe,
     TodocomponentComponent,
+    EmbaucheComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot() , // ToastrModule added
   ],
   providers: [],
   bootstrap: [AppComponent]

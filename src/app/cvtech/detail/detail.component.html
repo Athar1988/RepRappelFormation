@@ -9,6 +9,7 @@
           <div class="main">
             <h3 class="name">{{cv?.name}} {{cv?.firstname}}</h3>
             <p class="profession">{{cv?.job}}</p>
+
             <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
           </div>
           <div class="footer">
@@ -24,7 +25,7 @@
           <div class="main">
             <h4 class="text-center">Job Description</h4>
             <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
-
+            <button (click)="embaucherCV(cv)" class="btn btn-primary">Embaucher</button>
             <div class="stats-container">
               <div class="stats">
                 <h4>235</h4>

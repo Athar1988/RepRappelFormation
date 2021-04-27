@@ -1,5 +1,6 @@
 import { Component, OnInit ,Output, EventEmitter} from '@angular/core';
 import {Cv} from '../Modele/cv';
+import {ListCVService} from '../services/list-cv.service';
 
 @Component({
   selector: 'app-list',
@@ -8,18 +9,13 @@ import {Cv} from '../Modele/cv';
 })
 export class ListComponent implements OnInit {
   cvs: Cv[] = [];
-  cvCourant: Cv[] = [];
   @Output() sendIremversCv=new EventEmitter();
 
-  constructor() {
-    this.cvs =[
-      new Cv(1, 'ALi', 'ben salah', 'rotating_card_profile.png', 'Ingénieur Informatique', 35, 5466798 ),
-      new Cv(2, 'Asma', 'ben Ali', '', 'Styliste Modeliste', 32, 2525436415),
-      new Cv(3, 'Marwa', 'ben Ghorbel', 'rotating_card_profile3.png', 'Cuisinière', 25, 15875442 ),
-    ];
+  constructor(public listecvservice:ListCVService) {
   }
 
   ngOnInit() {
+    this.cvs=this.listecvservice.getListeCV();
   }
 
   recupereItem(cv: Cv) {
