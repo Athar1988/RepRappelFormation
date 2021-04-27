@@ -10,6 +10,10 @@ import { ListComponent } from './cvtech/list/list.component';
 import { ItemComponent } from './cvtech/item/item.component';
 import { CvComponent } from './cvtech/cv/cv.component';
 import { DetailComponent } from './cvtech/detail/detail.component';
+import { NgstyleComponent } from './directive/ngstyle/ngstyle.component';
+import { RainbowDirective } from './directive/rainbow.directive';
+import { DefaultImagePipe } from './pipes/default-image.pipe';
+import { TodocomponentComponent } from './services/todocomponent/todocomponent.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { DetailComponent } from './cvtech/detail/detail.component';
     ListComponent,
     ItemComponent,
     CvComponent,
-    DetailComponent
+    DetailComponent,
+    NgstyleComponent,
+    RainbowDirective,
+    DefaultImagePipe,
+    TodocomponentComponent,
   ],
   imports: [
     BrowserModule,
