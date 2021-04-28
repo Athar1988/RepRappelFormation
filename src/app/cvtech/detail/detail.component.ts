@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Cv} from '../Modele/cv';
 import {EmbaucheService} from '../services/embauche.service';
 import {ToastrService} from 'ngx-toastr';
-
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
@@ -11,7 +11,8 @@ import {ToastrService} from 'ngx-toastr';
 export class DetailComponent implements OnInit {
   @Input() cv:Cv=null;
   constructor(public embaucheservice: EmbaucheService,
-              private toaster: ToastrService) { }
+              private toaster: ToastrService,
+              private router: Router) { }
 
   ngOnInit() {
   }
@@ -24,8 +25,6 @@ export class DetailComponent implements OnInit {
 else{
       this.embaucheservice.ajouterCvEmbaucher(cv);
     }
-
-
-
   }
+
 }

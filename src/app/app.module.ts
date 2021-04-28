@@ -17,6 +17,9 @@ import { TodocomponentComponent } from './services/todocomponent/todocomponent.c
 import {ToastrModule} from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EmbaucheComponent } from './cvtech/embauche/embauche.component';
+import { HeaderComponent } from './menu/header/header.component';
+import { SimilatorMenuComponent } from './header/similator-menu/similator-menu.component';
+import { DetailcvComponent } from './cvtech/detailcv/detailcv.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import { EmbaucheComponent } from './cvtech/embauche/embauche.component';
     DefaultImagePipe,
     TodocomponentComponent,
     EmbaucheComponent,
+    HeaderComponent,
+    SimilatorMenuComponent,
+    DetailcvComponent,
   ],
   imports: [
     BrowserModule,
