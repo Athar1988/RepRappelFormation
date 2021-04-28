@@ -1,0 +1,7 @@
+<div *ngIf="cvEmbaucher.length">
+<div id="embauche">
+    <span *ngFor="let E of cvEmbaucher">
+       <app-item [cv]="E" [size]="150"></app-item>
+    </span>
+  </div>
+</div>
