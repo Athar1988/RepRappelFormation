@@ -1,0 +1,35 @@
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input
+      #email="ngModel"
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      placeholder="Enter email"
+      ngModel name="email"
+      email  required>
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="alert alert-danger" *ngIf="email.invalid && email.dirty">
+    l'email est incorrect
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input
+      #password="ngModel"
+      type="password"
+      class="form-control"
+      id="exampleInputPassword1"
+      placeholder="Password"
+      ngModel name="password"
+      required minlength="4">
+  </div>
+  <div class="alert alert-danger" *ngIf="password.invalid && password.dirty">
+    le passeword doit avoir obligatoirement 4 caractéres
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit</button>
+</form>

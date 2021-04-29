@@ -23,6 +23,7 @@
     "bootstrap": "^4.6.0",
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
+    "loopback-connector-mysql": "^6.0.0",
     "mathjs": "^9.3.2",
     "ngx-toastr": "^13.2.1",
     "rxjs": "~6.6.7",

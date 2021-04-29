@@ -1,10 +1,12 @@
 <div class="btn-success"> {{Date| date:"mediumDate"}}</div>
   <div class="row">
     <div class="col">
-      <app-list (sendIremversCv)="recupereItemversCv($event)"></app-list>
+      <app-list></app-list>
+      <!-- <app-list (sendIremversCv)="recupereItemversCv($event)"></app-list>-->
     </div>
     <div class="col">
-      <app-detail [cv]=itemCvcourant ></app-detail>
+      <app-detail ></app-detail>
+      <!--<app-detail [cv]=itemCvcourant ></app-detail>-->
     </div>
   </div>
 <div class="row">

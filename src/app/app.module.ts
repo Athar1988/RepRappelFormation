@@ -20,6 +20,13 @@ import { EmbaucheComponent } from './cvtech/embauche/embauche.component';
 import { HeaderComponent } from './menu/header/header.component';
 import { SimilatorMenuComponent } from './header/similator-menu/similator-menu.component';
 import { DetailcvComponent } from './cvtech/detailcv/detailcv.component';
+import { FrontComponent } from './cvtech/front/front.component';
+import { BackComponent } from './cvtech/back/back.component';
+import { NotfoundComponent } from './cvtech/notfound/notfound.component';
+import { FormComponent } from './cvtech/form/form.component';
+import { AddpersonneComponent } from './cvtech/addpersonne/addpersonne.component';
+import { ObservableComponent } from './observable/observable.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,6 +45,12 @@ import { DetailcvComponent } from './cvtech/detailcv/detailcv.component';
     HeaderComponent,
     SimilatorMenuComponent,
     DetailcvComponent,
+    FrontComponent,
+    BackComponent,
+    NotfoundComponent,
+    FormComponent,
+    AddpersonneComponent,
+    ObservableComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +58,7 @@ import { DetailcvComponent } from './cvtech/detailcv/detailcv.component';
     FormsModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot() , // ToastrModule added
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

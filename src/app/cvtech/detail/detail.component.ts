@@ -3,18 +3,21 @@ import {Cv} from '../Modele/cv';
 import {EmbaucheService} from '../services/embauche.service';
 import {ToastrService} from 'ngx-toastr';
 import {Router} from '@angular/router';
+import {ListCVService} from '../services/list-cv.service';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
-  @Input() cv:Cv=null;
+   cv:Cv=null;
   constructor(public embaucheservice: EmbaucheService,
               private toaster: ToastrService,
-              private router: Router) { }
+              private router: Router,
+              private service:ListCVService) { }
 
   ngOnInit() {
+    this.service.clickItemSubject.subscribe((data) => (this.cv = data));
   }
 
   embaucherCV(cv: Cv) {
@@ -26,5 +29,6 @@ else{
       this.embaucheservice.ajouterCvEmbaucher(cv);
     }
   }
+
 
 }
